@@ -1,0 +1,385 @@
+/* -------------------------- Storage ------------------------------------------------- */
+@font-face {
+  font-family: Nama atas;
+  src: url(Fonts/Font-Nama-Atas.ttf);
+}
+
+@font-face {
+  font-family: Nama Profile;
+  src: url(Fonts/Font-Nama-Profile.ttf);
+}
+@font-face {
+  font-family: Judul;
+  src: url(Fonts/Font-Judul.ttf);
+}
+
+@font-face {
+  font-family: Tittle;
+  src: url(Fonts/Font-Tittle.ttf);
+}
+
+@font-face {
+  font-family: Utama;
+  src: url(Fonts/Font-Utama.ttf);
+}
+
+:root{
+
+  --warnatext1: #F8F1FF;
+  --warnatext2: #34344A;
+
+  --warnaborder:#040404;
+  --warnaline: #273043;
+
+  --warnabackground1:#34344A;
+  --warnabackground2: #F8F1FF;
+
+  --warnaicon: #3B3561;
+  --warnahover: #211A1E;
+
+  --sectionpading: 6rem 0;
+  --itemborderradius: 0.7rem;
+
+}
+
+/* ---------------------------------------------- Halaman ---------------------------------  */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+.main-container{
+  width: 1215px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px){
+  .main-container {
+    width: 90%;
+  }
+}
+
+/* --------------------------------------------------- Profile ---------------------------------------  */
+#Profile {
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.Profile-name{
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+  font-style: oblique;
+  font-family: Nama Profile;
+  color: var();
+}
+.Profile-name span{
+  color: black;
+  font-family: Nama Profile;
+}
+
+.Profile-left p {
+  font-size: large;
+  color: #000000;
+  font-family: Utama;
+  text-transform: inherit;
+  letter-spacing: 0.1;
+}
+
+.Profile-tittle{
+  text-transform: uppercase;
+  letter-spacing: 0.5mm;
+  color: var(--warnatext2);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+  font-family: Tittle;
+}
+
+.Profile-tittle::before {
+  content: "";
+  width: 30px;
+  height: 1.2px;
+  background: var(--warnaborder);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+
+/* ------------------------------------------ logo ---------------------------- */
+.logo{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: rgb(255, 255, 255);
+  }
+
+.logo{
+  font-family: Nama Atas, serif;
+  font-style: normal;
+  letter-spacing: 0.2rem;
+  text-wrap: nowrap;
+  overflow: hidden;
+  width: 20ch;
+  animation: typing 2s steps(20) infinite alternate-reverse;
+}
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+}
+
+
+/* ----------------------------------------------- Navigation Menu ----------------------------- */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--warnabackground1);
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.nav ul {
+  list-style: none;
+  display:flex;
+  gap: 5rem;
+  font-family: Judul;
+  font-size: large;
+  text-align: center;
+}
+
+nav ul li {
+  
+  display: flex ;
+  align-items: flex-end;
+
+}
+
+nav ul li a {
+  color: var(--warnatext1);;
+}
+
+nav ul li a:hover{
+  color: aqua;
+  transition: all .3s ease-in-out;
+}
+
+/* ------------------------------------------------------- Gambar Bagian 1 ----------------------------------  */
+
+.Gambar-Pasha img {
+  width: 90%;
+}
+
+.Gambar-Pasha{
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------- Bagian Skill --------------------------------------- */
+
+#Skill {
+  background-color: var(--warnabackground1);
+  padding: var(--sectionpading);
+}
+
+.skill .Profile-tittle{
+  margin: 0 auto;  
+}
+
+.Profile-tittle-skill{
+  text-align: center;
+  color: #F8F1FF;
+  font-family: Judul;
+}
+.skill-tittle{
+  text-align: center;
+  color: var(--warnatext1);
+  
+}
+
+.Grid-3Skill .skill{
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--warnabackground2);
+  border-radius: 2rem;
+}
+
+.Grid-3Skill{
+  font-family: Utama;
+  color: rgb(34, 34, 34);
+}
+
+.Grid-3Skill span{
+  color: black;
+  font-style: oblique;
+  
+}
+.Grid-3Skill h4{
+  margin: 1.5rem 0;
+  font-weight: 800rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-family: Tittle;
+  letter-spacing: 0.0.1rem;
+  color: #000000;
+
+}
+.skill-icon{
+  background: var(--warnaicon);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.skill-icon svg{
+  fill: var(--warnabackground2);
+}
+
+.skill-icon-math svg{
+  fill: var(--warnabackground2);
+}
+
+.skill-icon-math{
+  background: var(--warnaicon);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+.Grid-3Skill {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+/* -------------------------------------- Tentang-Saya ------------------------------- */
+
+#Tentang-Saya{
+  background-color: var(--warnabackground2);
+  padding: var(--sectionpading);
+}
+
+.Tentang-saya .Tentang-Saya-Tittle{
+  margin: 0 auto;
+}
+.Tentang-Saya-Tittle{
+  text-align: left;
+  color: var(--warnatext2);
+  font-size: xx-large;
+  font-family: Judul;
+}
+
+.About-Me li{
+ font-family: Utama;
+ margin: 1.5rem 0 ;
+ color: rgb(70, 56, 56);
+}
+
+.About-Me li span{
+  font-style: oblique;
+  color: #000000;
+  font-family: Tittle;
+}
+
+.About-Me li {
+  list-style:square;
+}
+
+/* ------------------------------------------------Pendidikan---------------------*/
+
+#Pendidikan {
+  background-color: var(--warnabackground1);
+  padding: var(--sectionpading);
+}
+
+.Pendidikan-Tittle{
+  margin: 0 auto;
+}
+
+.Pendidikan-Tittle{
+  text-align: center;
+  color: var(--warnatext1);
+  font-family: Judul;
+  letter-spacing: 0.2rem;
+}
+
+.Perjalanan-Pendidikanku img{
+  width: 1000px;
+  height: 500px;
+  image-orientation: from-image;
+  margin-top: 2rem;
+  margin-left: 6rem;
+  image-rendering: optimizeQuality;
+}
+
+/* ------------------------------- Kontak -------------------------- */
+#Kontak {
+  padding: var(--sectionpading);
+  background-color: var(--warnabackground2);
+}
+
+.Kontak{
+  font-family: Judul;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.Hubungi-kami{
+  font-family: Tittle;
+  letter-spacing: 0rem;
+  text-align: center;
+  padding-top: 4rem;
+  font-size: medium;
+}
+
+.Hubungi-kami .Email{
+  padding-top: 2rem;
+}
+
+.Hubungi-kami .Instagram{
+  padding-top: 2rem;
+}
+
+.Hubungi-kami h5{
+  font-size: medium;
+}
+
+
+/* -----------------------footer----------------- */
+
+footer{
+  background-color: var(--warnabackground1);
+  padding: 2rem 4rem;
+  color: var(--warnatext1);
+  font-family: Tittle;
+  font-style: inherit;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+footer h4{
+  padding-top: 1rem;
+}
+
+footer h4 span{
+ text-decoration: dotted;
+}
+
